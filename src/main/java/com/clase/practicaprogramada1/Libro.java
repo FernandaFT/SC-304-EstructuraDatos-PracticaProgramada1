@@ -66,5 +66,5 @@ public class Libro {
     public void setFechaPublicacion(String fechaPublicacion) {
         this.fechaPublicacion = fechaPublicacion;
     }
-
+  
 }

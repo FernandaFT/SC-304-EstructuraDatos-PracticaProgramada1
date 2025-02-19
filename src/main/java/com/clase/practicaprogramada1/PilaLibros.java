@@ -86,5 +86,6 @@ public class PilaLibros extends Pila {
         return tamano;
     }
     
+    public void retornaInversa(){}
     
 }
