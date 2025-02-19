@@ -26,7 +26,6 @@ public class Pila {
     
     /**
      * Agrega un nuevo libro a la pila.
-     * @author Fernanda Fajardo
      * @param libro El libro que se añadirá a la pila.
      */
     public void push(Libro libro){  
@@ -42,10 +41,10 @@ public class Pila {
     
     /**
      * Elimina y devuelve el libro en el top de la pila.
-     * @author Fernanda Fajardo
      * @return El libro estaba en el top de la pila, o {@code null} si la pila esta vacía.
      */
     public Libro pop(){
+        
         if(isEmpty()){
             System.out.println("Error: la pila esta vacía, no puede desapilar");
             return null;
@@ -58,10 +57,10 @@ public class Pila {
 
     /**
      * Verifica si la pila esta vacía.
-     * @author Fernanda Fajardo
      * @return {@code true} si la pila no tiene elementos, {@code false} en caso contrario.
      */
     public boolean isEmpty(){
+        
         if(top == null){
             return true;
         }else{
@@ -72,9 +71,9 @@ public class Pila {
     /**
      * Imprime en consola los libros almacenados en la pila.
      * Si la pila está vacía, muestra un mensaje indicándolo.
-     * @author Fernanda Fajardo
      */
     public void print(){
+        
         if(isEmpty()){
             System.out.println("La pila esta vacía.");
         }else{
