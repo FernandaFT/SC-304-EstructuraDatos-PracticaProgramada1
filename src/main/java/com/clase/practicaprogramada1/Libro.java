@@ -66,5 +66,15 @@ public class Libro {
     public void setFechaPublicacion(String fechaPublicacion) {
         this.fechaPublicacion = fechaPublicacion;
     }
-  
+
+    @Override
+    public String toString() {
+        return "{\n" +
+                " \"nombre del libro\": \"" + nombreLibro + "\",\n" +
+                " \"autor\": \"" + autor + "\",\n" +
+                " \"género\": \"" + genero + "\",\n" +
+                " \"cantidad de páginas\": \"" + cantidadPaginas + "\",\n" +
+                " \"fecha de publicación\": \"" + fechaPublicacion + "\",\n" +
+                "}";
+    } 
 }
