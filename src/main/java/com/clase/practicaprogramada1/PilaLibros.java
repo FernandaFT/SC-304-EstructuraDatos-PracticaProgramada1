@@ -36,14 +36,14 @@ public class PilaLibros extends Pila {
      * @return El nodo modificado después de eliminar el libro en la posición específicada.
      */
     public Nodo recursivoEliminaLibro(Nodo nodo, int posicion){
-        //Caso base
+        //Caso base:
         if(nodo == null){
             return null;
-        }else{
+        }else{// Si la posición es 0, se eliminara el nodo actual
             if(posicion == 0){
                 return nodo.getSig();
             }
-            //Llamada recursiva
+            //Llamada recursiva: para avanzar al siguiente nodo
             nodo.setSig(recursivoEliminaLibro(nodo.getSig(), posicion -1));
             return nodo;
         }
@@ -70,7 +70,7 @@ public class PilaLibros extends Pila {
     }
     
     /**
-     * Retorna el tamaño de la pila, la cantidad de elementos almacenanos en ella.
+     * Retorna el tamaño de la pila es decir, la cantidad de elementos almacenanos en ella.
      * @author Fernanda Fajardo
      * @return La cantidad de libros en la pila.
      */
@@ -86,6 +86,32 @@ public class PilaLibros extends Pila {
         return tamano;
     }
     
-    public void retornaInversa(){}
+    /***
+     * Invierte la pila de manera recursiva.
+     * Despues de ejecutar este método, el libro en el fondo de la pila pasará a estar en el tope.
+     * @author Fernanda Fajardo
+     */
+    public void retornaInversa(){
+        if(!isEmpty()){ // Si no esta vacio
+            Libro libro = pop(); // Extrae el elemento del tope
+            retornaInversa(); // llamada recursiva para invertir el resto de la pila
+            insertaAlFinal(libro); //  Inserta el libro extraído en la parte inferior de la pila
+        }
+    }
+    
+    /***
+     * Inserta un libro en la parte inferior de la pila de manera recursiva.
+     * @author Fernanda Fajardo
+     * @param libro El libro que se insertará al final de la pila
+     */
+    public void insertaAlFinal(Libro libro){
+        if(isEmpty()){
+            push(libro);
+        }else{
+            Libro aux = pop(); // Extrae el libro del tope
+            insertaAlFinal(libro); // Llamada recursiva para seguir bajando e la pila
+            push(aux); // vuelve a apilar el elemento que se extrajo.
+        }
+    }
     
 }
