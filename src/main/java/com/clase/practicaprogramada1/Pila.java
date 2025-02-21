@@ -69,7 +69,7 @@ public class Pila {
     }
     
     /**
-     * Imprime en consola los libros almacenados en la pila.
+     * Imprime en consola los libros almacenados en la pila en formato JSON.
      * Si la pila está vacía, muestra un mensaje indicándolo.
      */
     public void print(){
@@ -78,10 +78,15 @@ public class Pila {
             System.out.println("La pila esta vacía.");
         }else{
             Nodo actual = top;
+            System.out.println("[");
             while(actual != null){
                 System.out.println(actual.getLibro());
+                if(actual.getSig() != null){
+                    System.out.println(",\n");
+                }
                 actual = actual.getSig();
             }
+            System.out.println("]");
         }
     }
 }
