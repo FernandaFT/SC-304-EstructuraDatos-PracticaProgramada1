@@ -74,7 +74,7 @@ public class Libro {
                 " \"autor\": \"" + autor + "\",\n" +
                 " \"género\": \"" + genero + "\",\n" +
                 " \"cantidad de páginas\": \"" + cantidadPaginas + "\",\n" +
-                " \"fecha de publicación\": \"" + fechaPublicacion + "\",\n" +
-                "}";
+                " \"fecha de publicación\": \"" + fechaPublicacion + "\"\n" +
+                "},";
     } 
 }
