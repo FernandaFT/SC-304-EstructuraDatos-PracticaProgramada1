@@ -81,9 +81,6 @@ public class Pila {
             System.out.println("[");
             while(actual != null){
                 System.out.println(actual.getLibro());
-                if(actual.getSig() != null){
-                    System.out.println(",\n");
-                }
                 actual = actual.getSig();
             }
             System.out.println("]");
