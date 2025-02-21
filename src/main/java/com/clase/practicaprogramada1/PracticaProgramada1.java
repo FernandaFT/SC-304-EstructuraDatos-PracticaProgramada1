@@ -25,7 +25,7 @@ public class PracticaProgramada1 {
         
         Libro libro6 = new Libro("Project Hail Mary", "Andy Weir","Ficción",496,"04 Mayo 2021");
 
-        // Agregar los libros a la pila
+        // Agregar los libros a la pila1
         pila1.push(libro1);
         pila1.push(libro2);
         pila1.push(libro3);
@@ -33,15 +33,23 @@ public class PracticaProgramada1 {
         pila1.push(libro5);
         pila1.push(libro6);
 
-        // Imprimir el tamaño de la pila usando el método retornaTamano
-        System.out.println("El tamaño de la pila es: " + pila1.retornaTamano() + " libros.");
+        // Imprimir el tamaño de la pila usando el método retornaTamano();
+        System.out.println("\nEl tamaño de la pila es: " + pila1.retornaTamano() + " libros.");
         
-        // Invocar el método cuentaLibrosGenero para contar los libros de género "Novela"
+        // Invocar el método cuentaLibrosGenero(); para contar los libros de género "Novela"
         int numNovela = pila1.cuentaLibrosGenero("Novela");
-        System.out.println("Los libros del género Novela son: " + numNovela + " libros.");
+        System.out.println("\nLos libros del género Novela son: " + numNovela + " libros.");
         
-       // Invocar el método eliminaLibro para eliminar un libro de la pila en la posición indicada.
-       pila1.eliminaLibro(0); //LIFO
-       System.out.println("El tamaño de la pila es: " + pila1.retornaTamano() + " libros.");
+        // Invocar el método eliminaLibro(); para eliminar un libro de la pila en la posición indicada.
+        pila1.eliminaLibro(0); //LIFO
+       
+        // Se volvio a imprimir el método retornaTamano(); para ver el tamaño de la pila una vez se elimino un libro.
+        System.out.println("\nEl tamaño de la pila es: " + pila1.retornaTamano() + " libros.");
+        
+        //Invocar el método retornaInversa(); y se imprime la pila con todo los datos en formato Json
+        pila1.retornaInversa();
+        System.out.println("\nLos elementos de la pila son:");
+        pila1.print();
+       
     }
 }
